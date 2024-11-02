@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        * {
+    
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-image: url("https://images.pexels.com/photos/3194518/pexels-photo-3194518.jpeg?cs=srgb&dl=pexels-canvastudio-3194518.jpg&fm=jpg");
+    background-attachment: fixed;
+}
+
+.signup-form {
+    width: 400px;
+    padding: 20px;
+    background-color: #1a1a33;
+    border: 5px solid #d20909;
+    color: #ffea00;
+
+}
+
+.signup-form h2 {
+    background-color: #ff9800;
+    color: #1a1a33;
+    font-size: 24px;
+    padding: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.signup-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #ffea00;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="tel"],
+.signup-form input[type="password"],
+.signup-form select {
+    width: 60%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: none;
+    font-size: 16px;
+}
+
+.signup-form .dob select {
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 15px;
+}
+
+.signup-form .gender label {
+    margin-right: 15px;
+}
+
+.signup-form .gender input[type="radio"] {
+    margin-right: 5px;
+}
+
+.signup-form .terms {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.signup-form .buttons {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.signup-form .submit-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+.signup-form .cancel-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="signup-form">
+        <h2>Create Account</h2>
+        <form action="#" method="post">
+            First Name:<input type="text" id="first-name" placeholder="Enter First Name" required><br>
+            Last Name:<input type="text" id="last-name" placeholder="Enter Last Name" required><br>
+            Username:<input type="text" placeholder="Username"><br>
+            Date of Birth:<input type="date" placeholder="Date"><br><br><br>
+                Select your Country:
+
+                <select>
+                    <option>Click to select your Country</option>
+                    <option value="Kigali">Rwanda</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cabo Verde">Cabo Verde</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo (Congo-Brazzaville)">Congo (Congo-Brazzaville)</option>
+                    <option value="Congo (DRC)">Congo (DRC)</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Eswatini (Swaziland)">Eswatini (Swaziland)</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guinea-Bissau">Guinea-Bissau</option>
+                    <option value="Ivory Coast (Côte d'Ivoire)">Ivory Coast (Côte d'Ivoire)</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Libya">Libya</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Sudan">South Sudan</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+                
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Enter E-mail" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Enter Phone" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+
+            <div class="terms">
+                <input type="checkbox" id="terms" required> 
+                <label for="terms">I Agree to the Terms of use</label>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="submit-btn">Create</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

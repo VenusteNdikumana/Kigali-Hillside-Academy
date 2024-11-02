@@ -1,0 +1,62 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            background-image: url("https://3.files.edl.io/c1e3/23/07/17/210826-73b99a8c-0bee-466f-bb7b-bc0f264a2125.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h2 {
+            color: #004080;
+            text-align: center;
+            font-weight: bold;
+        }
+        form {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #857878;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
+        }
+        label, input[type="text"], input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+        input[type="submit"] {
+            background-color: #004080;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #003366;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Attendance Tracker</h2>
+    <form>
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+        <input type="submit" value="Submit Attendance">
+    </form>
+</body>
+</html>

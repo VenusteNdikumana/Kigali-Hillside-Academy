@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone Style Calculator</title>
+  <style>
+    /* Styling similar to iPhone calculator */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #a09797;
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      width: 300px;
+      background-color: #333;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .display {
+      background-color: #000;
+      color: white;
+      font-size: 2.5em;
+      text-align: right;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      background-color: rgb(116, 116, 116);
+    }
+
+    .btn {
+      padding: 20px;
+      font-size: 1.5em;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-dark {
+      background-color: #333;
+    }
+
+    .btn-light {
+      color: #000;
+      background-color: #a5a5a5;
+    }
+
+    .btn-orange {
+      background-color: #ff9500;
+    }
+
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+  </style>
+</head>
+<body>
+    <p><b>Dear student don't worry for doing some calculations because we have made a simple calculator for you.</b></p><br>
+
+  <div class="calculator">
+    <div id="display" class="display">0</div>
+    <div class="buttons">
+      <button class="btn btn-light" onclick="clearDisplay()">AC</button>
+      <button class="btn btn-light" onclick="toggleSign()">±</button>
+      <button class="btn btn-light" onclick="percentage()">%</button>
+      <button class="btn btn-orange" onclick="chooseOperator('/')">÷</button>
+      <button class="btn btn-dark" onclick="appendNumber('7')">7</button>
+      <button class="btn btn-dark" onclick="appendNumber('8')">8</button>
+      <button class="btn btn-dark" onclick="appendNumber('9')">9</button>
+      <button class="btn btn-orange" onclick="chooseOperator('*')">×</button>
+      <button class="btn btn-dark" onclick="appendNumber('4')">4</button>
+      <button class="btn btn-dark" onclick="appendNumber('5')">5</button>
+      <button class="btn btn-dark" onclick="appendNumber('6')">6</button>
+      <button class="btn btn-orange" onclick="chooseOperator('-')">−</button>
+      <button class="btn btn-dark" onclick="appendNumber('1')">1</button>
+      <button class="btn btn-dark" onclick="appendNumber('2')">2</button>
+      <button class="btn btn-dark" onclick="appendNumber('3')">3</button>
+      <button class="btn btn-orange" onclick="chooseOperator('+')">+</button>
+      <button class="btn btn-dark" style="grid-column: span 2;" onclick="appendNumber('0')">0</button>
+      <button class="btn btn-dark" onclick="appendNumber('.')">.</button>
+      <button class="btn btn-orange" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+    let currentOperand = '0';
+    let previousOperand = '';
+    let operator = null;
+    let resetDisplay = false;
+
+    function updateDisplay() {
+      display.textContent = currentOperand;
+    }
+
+    function clearDisplay() {
+      currentOperand = '0';
+      previousOperand = '';
+      operator = null;
+      resetDisplay = false;
+      updateDisplay();
+    }
+
+    function appendNumber(number) {
+      if (resetDisplay) {
+        currentOperand = number;
+        resetDisplay = false;
+      } else {
+        if (number === '.' && currentOperand.includes('.')) return;
+        currentOperand = currentOperand === '0' ? number : currentOperand + number;
+      }
+      updateDisplay();
+    }
+
+    function chooseOperator(op) {
+      if (operator !== null) calculate();
+      previousOperand = currentOperand;
+      operator = op;
+      resetDisplay = true;
+    }
+
+    function calculate() {
+      if (operator === null || resetDisplay) return;
+      let result;
+      const prev = parseFloat(previousOperand);
+      const current = parseFloat(currentOperand);
+
+      if (isNaN(prev) || isNaN(current)) return;
+
+      switch (operator) {
+        case '+':
+          result = prev + current;
+          break;
+        case '-':
+          result = prev - current;
+          break;
+        case '*':
+          result = prev * current;
+          break;
+        case '/':
+          result = current === 0 ? 'Error' : prev / current;
+          break;
+        default:
+          return;
+      }
+      currentOperand = result.toString();
+      operator = null;
+      resetDisplay = true;
+      updateDisplay();
+    }
+
+    function toggleSign() {
+      currentOperand = (parseFloat(currentOperand) * -1).toString();
+      updateDisplay();
+    }
+
+    function percentage() {
+      currentOperand = (parseFloat(currentOperand) / 100).toString();
+      updateDisplay();
+    }
+  </script>
+
+</body>
+</html>

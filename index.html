@@ -1,0 +1,190 @@
+<! DOCTYPE html>
+<html>
+<head><title>
+</title>
+<style>
+    header {
+            background-color: #ffffff;
+            color: hsl(0, 0%, 0%);
+            padding: 20px;
+            text-align: center;
+        }
+ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+background-color:#248a3e;
+font-weight: bold;
+}
+li{
+float:left;
+}
+li a{
+display:block;
+color:rgb(20, 18, 18);
+text-align:center;
+padding:14px 16px;
+text-decoration:none;
+font-size:24pt;
+}
+li a:hover,.dropdown:hover .dropbtn{
+background-color:red;}
+li.dropdown {display: inline-block;}
+.dropdown-content { display: none;
+position: absolute;
+background-color:#f9f9f9;
+min-width:160px;
+box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index:1;
+}
+.dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block;text￾align:left;}
+.dropdown-content a:hover {background-color: #f1f1f1;} 
+.dropdown:hover .dropdown-content{display:block;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+  
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  ;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f37070;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+footer {
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #ddd;
+            font-weight: bold;
+        }
+        footer a {
+            color: #303ac7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: #e60000;
+            text-decoration: underline;
+        }
+
+        .arrow{
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.down{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+</style>
+</head>
+<body style="background-image: url(https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?cs=srgb&dl=pexels-pixabay-53594.jpg&fm=jpg);">
+    <header><img src="logo.png" height="130px" width="150px" align="left">
+        <h1>KIGALI HILLSIDE ACADEMY</h1>
+        <p><B><I>Your Future Begins with hardwork and discipline</I></B></p>
+    </header>
+<div class="navbar">
+<ul>
+<li> <a href="file:///D:/My%20Projects/Project1/Pagecontent.html">Home</a></li>
+<li> <a href="file:///D:/My%20Projects/Project1/aboutus.html">About Us</a></li>
+<li> <a href="file:///D:/My%20Projects/Project1/OurPrograms.html">Our Programs</a></li>
+
+<div class="dropdown" onclick="">
+    <button class="dropbtn"><b>Account &nbsp;<i class="arrow down"></i></b></button>
+    <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="file:///D:/My%20Projects/Project1/Create%20Account.html">Create Account </a>
+      <a href="file:///D:/My%20Projects/Project1/login.html">Login</a>
+      <a href="file:///D:/My%20Projects/Project1/registrationform.html"> Registration</a>
+      <a href="file:///D:/My%20Projects/Project1/Intro.html">Portal</a>
+      <a href="file:///D:/My%20Projects/Project1/iphone_calculator.html">Student calculator</a>
+    </div>
+</div> 
+<li> <a href="file:///D:/My%20Projects/Project1/galley.html">Galley</a></li>
+<li> <a href="file:///D:/My%20Projects/Project1/ContactUs.html">Contact Us</a></li>
+</ul>
+</div>
+
+<marquee direction="left"
+width="450"
+height="500"
+behavior="alternate"><img src="https://i.pinimg.com/736x/13/1c/e5/131ce50bf2a9e741c8848f97e4f1110f.jpg"></marquee>
+<img src="https://degrees.snu.edu/hs-fs/hubfs/AdobeStock_518657595.jpeg" height="500px" width="540px">
+<marquee direction="left"
+width="500"
+height="500"
+behavior="alternate"><img src="https://cdn.firstcry.com/education/2022/06/04170649/1893649654.jpg" width="800px" height="500px"></marquee>
+<footer>
+    &copy; <span id="year"></span> kigali hill side academy. All rights reserved. 
+    <a href="file:///D:/My%20Projects/Project1/privacy-policy.html"><br>Privacy Policy</a> |
+    <a href="terms.html">Terms of Service</a>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

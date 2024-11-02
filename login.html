@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Interface</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAO9naO_UON1mwUXkNkGHsP4sQVCZs8tRa6g&s");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Container styling */
+        .login-container {
+            width: 350px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Input styling */
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Button styling */
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #004080;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-container button:hover {
+            background-color: #003366;
+        }
+
+        /* Additional link styling */
+        .login-container p {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        
+        .login-container a {
+            color: #004080;
+            text-decoration: none;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Social login button styling */
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .google-btn, .apple-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .google-btn {
+            background-color: #4285f4;
+            color: #fff;
+        }
+        
+        .apple-btn {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Icon styling with Google colors */
+        .google-btn i {
+            color: #4285f4;
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        .apple-btn i {
+            color: #fff;
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        /* Google text colors */
+        .google-btn span.google-text {
+            font-weight: bold;
+        }
+        .google-btn span.g1 { color: #4285f4; }
+        .google-btn span.o1 { color: #ea4335; }
+        .google-btn span.o2 { color: #fbbc05; }
+        .google-btn span.g2 { color: #4285f4; }
+        .google-btn span.l  { color: #34a853; }
+        .google-btn span.e  { color: #ea4335; }
+
+        /* Hover effects */
+        .google-btn:hover {
+            background-color: #357ae8;
+        }
+        
+        .apple-btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Your Account</h2>
+        <form action="#">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Social Login Buttons -->
+        <div class="social-login">
+            <button class="google-btn">
+                <i class="fab fa-google"></i>
+                <span class="google-text">
+                    <span class="g1"> Login with G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span>
+                </span>
+            </button>
+            <button class="apple-btn">
+                <i class="fab fa-apple"></i> Login with Apple
+            </button>
+        </div>
+
+        <p>Forgot your password? <a href="#">Click here</a></p>
+    </div>
+
+    <!-- Font Awesome for Icons (Add in the head section of your HTML) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
