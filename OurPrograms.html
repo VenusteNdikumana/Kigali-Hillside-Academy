@@ -1,71 +1,141 @@
+ <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs</title>
     <style>
-        body{
-    background: #688fc9;
-    background-color: ;
+        /* General Styles */
+        body {
+            background: #688fc9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        .about img {
-    margin-top: 1rem;
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
-}
 
-.programs {
-    background: #688fc9;
-    padding: 2rem 1rem;
-    text-align: center;
-    font-weight: bold;
-}
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-.programs h1 {
-    color: #0cef67;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
+        
 
-.program {
-    display: inline-block;
-    width: 30%;
-    padding: 1rem;
-    text-align: center;
-}
+        /* Programs Section Styles */
+        .programs {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
 
-.program img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 50%;
-}
+        .programs h1 {
+            color: #0cef67;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
 
-.program h2 {
-    margin-top: 0.5rem;
-    color: #333;
-}
+        .program {
+            display: inline-block;
+            width: 30%;
+            padding: 1rem;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .program img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 50%;
+        }
+
+        .program h2 {
+            margin-top: 0.5rem;
+            color: #333;
+            font-size: 1.5rem;
+        }
+
+        .program p {
+            color: #fff;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-top: 0.5rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: rgb(231, 58, 58);
+            margin: 0 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #20d766;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .program {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
     </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Welcome to Our School Programs</h1>
+    <p>Building a brighter future for every learner</p>
+</header>
+
+<!-- Programs Section -->
 <section class="programs" id="programs">
-    <h1><b></b>Our Programs</b></h1>
+    <h1>Our Programs</h1>
     <div class="program">
         <img src="https://www.creativehomenursery.ae/wp-content/uploads/2023/11/New-Banner-1-1-1170x650.jpg" alt="Toddlers program">
         <h2>Toddler's</h2>
-        Our child will experience the fun of learning through creativity,<br>
-         discovery in structured and free-choice activities that allow his or her natural curiosities<br>
-         to emerge in an accepting and nurturing Christian environment. <br>
-        It is our goal to make each day special for your child.<br>
-        Engaging activities designed for little learners to grow.<br>
+        <p>Our child will experience the fun of learning through creativity, discovery in structured and free-choice activities that allow natural curiosity to emerge in a nurturing environment.</p>
     </div>
     <div class="program">
-        <img src="https://www.gettingsmart.com/wp-content/uploads/2017/12/Digital-Learning-K12-Students.jpg" alt="Preschool program">
+        <img src="https://www.gettingsmart.com/wp-content/uploads/2017/12/Digital-Learning-K12-Students.jpg" alt="Middle program">
         <h2>Middle</h2>
-        <p> We priotize hands-on learning experiences to build learners,<br>
-            are developed through active learning and direct experience,<br> 
-            rather than just reading, listening, or watching., <br>also known as experiential or
-             kinesthetic learning, involves using the senses to get involved with the subject.</p>
+        <p>We prioritize hands-on learning experiences to build knowledge through active learning, allowing learners to gain skills through real, sensory experiences.</p>
     </div>
     <div class="program">
-        <img src="https://www.rungtacolleges.com/rsr/images/COMPUTER-SCIENCE.png" alt="Pre-K program">
-        <h2>Top </h2>
-        We enhance Learners to work with their Parents on Homework,
-        <br>where learners explores more knowledge and skills so that be familiar in every thing learners ate supposed to know.<br>With the support of parents like you, there's no limit to what they can achieve!
+        <img src="https://www.rungtacolleges.com/rsr/images/COMPUTER-SCIENCE.png" alt="Top program">
+        <h2>Top</h2>
+        <p>We encourage collaboration on homework, enabling students to gain essential knowledge and skills with support from parents for limitless achievement!</p>
     </div>
 </section>
-</head>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Our School Programs. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:venustendikumana2003@gmail.com">venustendikumana2003@gmail.com</a></p>
+    <div class="social-icons">
+        <a href="#">Facebook</a> | 
+        <a href="#">Twitter</a> | 
+        <a href="#">Instagram</a>
+    </div>
+</footer>
+
+</body>
+</html>
