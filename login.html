@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,12 +16,35 @@
         /* Body styling */
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAO9naO_UON1mwUXkNkGHsP4sQVCZs8tRa6g&s");
             background-repeat: no-repeat;
             background-size: cover;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 0;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
         }
 
         /* Container styling */
@@ -32,6 +55,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
+            margin-top: 60px; /* to avoid overlap with header */
         }
 
         .login-container h2 {
@@ -150,31 +174,40 @@
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login to Your Account</h2>
-        <form action="#">
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
 
-        <!-- Social Login Buttons -->
-        <div class="social-login">
-            <button class="google-btn">
-                <i class="fab fa-google"></i>
-                <span class="google-text">
-                    <span class="g1"> Login with G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span>
-                </span>
-            </button>
-            <button class="apple-btn">
-                <i class="fab fa-apple"></i> Login with Apple
-            </button>
-        </div>
+<header>
+    <h1>Welcome Back!</h1>
+</header>
 
-        <p>Forgot your password? <a href="#">Click here</a></p>
+<div class="login-container">
+    <h2>Login to Your Account</h2>
+    <form action="#">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Social Login Buttons -->
+    <div class="social-login">
+        <button class="google-btn">
+            <i class="fab fa-google"></i>
+            <span class="google-text">
+                <span class="g1"> Login with G</span><span class="o1">o</span><span class="o2">o</span><span class="g2">g</span><span class="l">l</span><span class="e">e</span>
+            </span>
+        </button>
+        <button class="apple-btn">
+            <i class="fab fa-apple"></i> Login with Apple
+        </button>
     </div>
 
-    <!-- Font Awesome for Icons (Add in the head section of your HTML) -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <p>Forgot your password? <a href="#">Click here</a></p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Kigali hillside Academy. All rights reserved.</p>
+</footer>
+
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
