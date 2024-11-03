@@ -1,93 +1,153 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kigali Academy</title>
     <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
 
-body {
-    background-image: url("https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?cs=srgb&dl=pexels-pixabay-53594.jpg&fm=jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color:rgb(103, 99, 99)
-    line-height: 2;
-}
+        /* Body Styling */
+        body {
+            background-color: pink;
+            color: rgb(12, 1, 1);
+            line-height: 1.6;
+            text-align: left;
+        }
 
-.header {
-    background: green;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-}
+        /* Header Styling */
+        .header {
+            background: green;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
 
-.header h1 {
-    font-size: 2.5rem;
-}
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
 
-.header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-}
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
 
-.about {
-    padding: 2rem 1rem;
-    text-align: center;
-    font-size: 5;
-}
+        /* About Section */
+        .about {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
 
-.about h2 {
-    font-size: 2rem;
-    color: #6fa3ef;
-}
-.contact {
-    background: #0b0d11;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    
-}
+        .about h2 {
+            font-size: 2rem;
+            color: #6fa3ef;
+        }
 
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
+        .about p {
+            font-size: 1rem;
+            margin-top: 1rem;
+            max-width: 800px;
+            margin: auto;
+        }
 
-.contact p {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-}
+        .about img {
+            border-radius: 10px;
+        }
 
-</style>
+        /* Footer Styling */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-top: 2px solid #444;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .about img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 1.5rem 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
+    <!-- Header Section -->
     <header class="header">
         <h1>WELCOME TO KIGALI HILLSIDE ACADEMY</h1>
-        <p><b>Where Little Learners learns to Grow with hands-on experience</b></p>
+        <p><b>Where Little Learners Grow with Hands-on Experience</b></p>
     </header>
 
+    <!-- About Section -->
     <section class="about" id="about">
-<p style="font-weight: bold;">At KIGALI HILLSIDE ACADEMY, we provide a safe, engaging environment for children to learn and grow. Our experienced staff is dedicated to nurturing every child’s unique abilities. we believe in creating a nurturing and inspiring environment where every child feels safe, happy, and free to explore. Our passionate team is dedicated to fostering curiosity, creativity, and confidence in every young mind. Through play-based learning and hands-on activities, we guide children on a joyful journey that nurtures both their hearts and minds.</p>
-        <marquee
-  direction="left"
-  width="700"
-  height="320"
-  behavior="alternate"
-  style="">
-<img src="https://www.studyhabitschool.com/public/images/primary/gallery/15.jpg" alt="Happy kids playing" width="400px" height="400px"></marquee>
-    </section>
-    <section class="contact" id="contact">
-        <p> Contact Us</p>
-        <p>Email:<a href="mailto:kigalihillsideacademy@gmail.com">kigalihillsideacademy@gmail.com</a></p>
-        <p>Phone: +250799375874</p>
+        <p style="font-weight: bold;">
+            At KIGALI HILLSIDE ACADEMY, we provide a safe, engaging environment
+            for children to learn and grow.<br>
+            Our experienced staff is dedicated to nurturing every child’s unique abilities. 
+            We believe in creating
+            a nurturing and inspiring environment where every child feels safe, happy, and free to explore.<br>
+            Our passionate team is dedicated to fostering curiosity,
+            creativity, and confidence in every young mind.
+            Through play-based learning and hands-on activities, we guide children on a joyful journey that nurtures
+            both their hearts and minds.
+        </p>
+        <marquee direction="left" width="700" height="320" behavior="alternate" style="margin-top: 1rem;">
+            <img src="https://www.studyhabitschool.com/public/images/primary/gallery/15.jpg" alt="Happy kids playing" width="400px" height="400px">
+        </marquee>
     </section>
 
+    <!-- Footer Section -->
+    <footer>
+        <p><href="mailto:venustendikumana2003@gmail.com">venustendikumana2003@gmail.com</p>
+        &copy; <span id="year"></span> Kigali Hillside Academy. All rights reserved.
+        <br>
+        <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms">Terms of Service</a>
+    </footer>
+
+    <!-- JavaScript to display the current year in the footer -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
