@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,164 +6,196 @@
     <title>Registration Form</title>
     <style>
         * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url("https://media.istockphoto.com/id/1463013729/photo/online-registration-form-for-modish-form-filling.jpg?s=612x612&w=0&k=20&c=Fnx06haU4IHYLcRpy9Po_TBknvBqVjicGuUWkGu8e6Y=");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url("https://media.istockphoto.com/id/1463013729/photo/online-registration-form-for-modish-form-filling.jpg?s=612x612&w=0&k=20&c=Fnx06haU4IHYLcRpy9Po_TBknvBqVjicGuUWkGu8e6Y=");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
 
-.registration-form {
-    width: 500px;
-    padding: 20px;
-    background-color: #00ccff;
-    border: 3px solid #1a1a1a;
-    color: #000;
-}
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 0;
+        }
 
-.registration-form h2 {
-    background-color: #ffec00;
-    color: #d10000;
-    font-size: 24px;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    border-bottom: 3px solid #1a1a1a;
-}
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+        }
 
-.registration-form label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 5px;
-    color: #000;
-}
+        .registration-form {
+            width: 500px;
+            padding: 20px;
+            background-color: #00ccff;
+            border: 3px solid #1a1a1a;
+            color: #000;
+            margin-top: 60px; /* To avoid overlap with header */
+            margin-bottom: 60px; /* To avoid overlap with footer */
+        }
 
-.registration-form input[type="text"],
-.registration-form input[type="password"],
-.registration-form input[type="file"],
-.registration-form select,
-.registration-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #1a1a1a;
-    font-size: 16px;
-    background-color: #fff;
-}
+        .registration-form h2 {
+            background-color: #ffec00;
+            color: #d10000;
+            font-size: 24px;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #1a1a1a;
+        }
 
-.registration-form textarea {
-    resize: vertical;
-}
+        .registration-form label {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #000;
+        }
 
-.registration-form .game-options {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-}
+        .registration-form input[type="text"],
+        .registration-form input[type="password"],
+        .registration-form input[type="file"],
+        .registration-form select,
+        .registration-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #1a1a1a;
+            font-size: 16px;
+            background-color: #fff;
+        }
 
-.registration-form .game-options input[type="checkbox"] {
-    margin-right: 5px;
-}
+        .registration-form textarea {
+            resize: vertical;
+        }
 
-.registration-form .game-options label {
-    display: inline;
-    font-size: 16px;
-    margin-left: 5px;
-}
+        .registration-form .game-options {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
 
-.registration-form .gender-options {
-    display: flex;
-    margin-bottom: 15px;
-}
+        .registration-form .game-options input[type="checkbox"] {
+            margin-right: 5px;
+        }
 
-.registration-form .gender-options label {
-    margin-right: 15px;
-    font-size: 16px;
-}
+        .registration-form .game-options label {
+            display: inline;
+            font-size: 16px;
+            margin-left: 5px;
+        }
 
-.registration-form .gender-options input[type="radio"] {
-    margin-right: 5px;
-}
+        .registration-form .gender-options {
+            display: flex;
+            margin-bottom: 15px;
+        }
 
-.registration-form .buttons {
-    display: flex;
-    justify-content: space-between;
-}
+        .registration-form .gender-options label {
+            margin-right: 15px;
+            font-size: 16px;
+        }
 
-.registration-form .click-me,
-.registration-form .reset-btn,
-.registration-form .submit-btn {
-    width: 30%;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
+        .registration-form .gender-options input[type="radio"] {
+            margin-right: 5px;
+        }
 
-.registration-form .click-me {
-    background-color: #bfbfbf;
-    color: #000;
-}
+        .registration-form .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
 
-.registration-form .reset-btn {
-    background-color: #e0e0e0;
-    color: #000;
-}
+        .registration-form .click-me,
+        .registration-form .reset-btn,
+        .registration-form .submit-btn {
+            width: 30%;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-.registration-form .submit-btn {
-    background-color: #00cc44;
-    color: #fff;
-}
+        .registration-form .click-me {
+            background-color: #bfbfbf;
+            color: #000;
+        }
 
+        .registration-form .reset-btn {
+            background-color: #e0e0e0;
+            color: #000;
+        }
+
+        .registration-form .submit-btn {
+            background-color: #00cc44;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-    <div class="registration-form">
-        <h2>Registration Form</h2>
-        <form action="#" method="post">
-            Names:<input type="text" id="name" placeholder="Enter Name" required>
-            Enter Password:<input type="password" id="password" placeholder="Enter Password" required>
-            Enter Address:<textarea id="address" rows="3" placeholder="Enter Address"></textarea>
-            Select Game:
-            <div class="game-options">
-                <input type="checkbox" id="hockey"><label for="hockey">Hockey</label>
-                <input type="checkbox" id="football"><label for="football">Football</label>
-                <input type="checkbox" id="badminton"><label for="badminton">Badminton</label>
-                <input type="checkbox" id="cricket"><label for="cricket">Cricket</label>
-                <input type="checkbox" id="volleyball"><label for="volleyball">Volleyball</label>
-            </div>
-            <label>Gender</label>
-            <div class="gender-options">
-                <input type="radio" id="male" name="gender" required> <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" required> <label for="female">Female</label>
-            </div>
-            <label for="age">Select your age</label>
-            <select id="age" required>
-                <option disabled selected>Select</option>
-                <option>18-25</option>
-                <option>26-35</option>
-                <option>36-45</option>
-                <option>46-55</option>
-                <option>56+</option>
-            </select>
-            <label for="photo">Select Photo</label>
-            <input type="file" id="photo" required>
-            <div class="buttons">
-                <button type="button" class="click-me">Click Me</button>
-                <button type="reset" class="reset-btn">Reset</button>
-                <button type="submit" class="submit-btn">Register Now</button>
-            </div>
-        </form>
-    </div>
+
+<header>
+    <h1>Join Us Today!</h1>
+</header>
+
+<div class="registration-form">
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+        Names:<input type="text" id="name" placeholder="Enter Name" required>
+        Enter Password:<input type="password" id="password" placeholder="Enter Password" required>
+        Enter Address:<textarea id="address" rows="3" placeholder="Enter Address"></textarea>
+        Select Game:
+        <div class="game-options">
+            <input type="checkbox" id="hockey"><label for="hockey">Hockey</label>
+            <input type="checkbox" id="football"><label for="football">Football</label>
+            <input type="checkbox" id="badminton"><label for="badminton">Badminton</label>
+            <input type="checkbox" id="cricket"><label for="cricket">Cricket</label>
+            <input type="checkbox" id="volleyball"><label for="volleyball">Volleyball</label>
+        </div>
+        <label>Gender</label>
+        <div class="gender-options">
+            <input type="radio" id="male" name="gender" required> <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" required> <label for="female">Female</label>
+        </div>
+        <label for="age">Select your age</label>
+        <select id="age" required>
+            <option disabled selected>Select</option>
+            <option>0-2</option>
+            <option>3-4</option>
+            <option>5-6</option>
+            <option>6+</option>
+        </select>
+        <label for="photo">Select Photo</label>
+        <input type="file" id="photo" required>
+        <div class="buttons">
+            <button type="button" class="click-me">Click Me</button>
+            <button type="reset" class="reset-btn">Reset</button>
+            <button type="submit" class="submit-btn">Register Now</button>
+        </div>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 Kigali Hillside Academy. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
