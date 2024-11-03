@@ -1,44 +1,110 @@
-<style>
-    .gallery {
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-
-.gallery-images {
-    
-    <html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
     <style>
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
+        /* Reset and font styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-.gallery-images img
- {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-}
-</style>
-<section class="gallery" id="gallery">
-    <div class="gallery-images">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-X9EMJXuMNWJlIdaVzuYU6QVYqTb7mZIFVw&s" alt="Activity 1">
-        <img src="https://cms-tc.pbskids.org/parents/Helping-Kids-Handle-Change-at-School.jpg">
-        <img src="https://static01.nyt.com/images/2019/08/21/multimedia/21-parenting-homevisit/21-parenting-homevisit-articleLarge.jpg">
-        <img src="https://www.livingwaters.wa.edu.au/wp-content/uploads/2021/05/DSC4938x-500x333.jpg">
-        <img src="https://washingtonparent.com/wp-content/uploads/2024/08/Untitled-design-79.jpg">
-        <img src="https://www.holyfamilydbq.org/wp-content/uploads/2021/11/IMG_1507-1024x684.jpg">
-        <img src="https://washingtonparent.com/wp-content/uploads/2024/08/Untitled-design-79.jpg">
-        <img src="https://www.ftc.net/wp-content/uploads/2024/04/Teacher-helping-student-with-laptop.jpg">
-        <img src="https://static.scientificamerican.com/sciam/cache/file/37D0C444-9D61-4921-B9D47E7E60D2DE75_source.jpg">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqk-b7gTC6kNSlRTHIqUjsurdHsdA2v7JqbA&s">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0CKkFQokx9O0atbi0EzkKGWTM-bj6HVIyg0xv6TZxzECVqDZu8v47jwwTFqhmvZ87iRA&usqp=CAU">
-        <img src="https://cdn.pickr.com.au/wp-content/uploads/2022/01/back-to-school-laptop-guide-kid-using-laptop.jpg">
-    </div>
-</section>
-</style>
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2rem;
+        }
+
+        /* Main gallery styling */
+        .gallery {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        .gallery-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .gallery-images img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .gallery-images img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #20d766;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+        }
+    </style>
 </head>
+<body>
+    <!-- Header with title and navigation -->
+    <header>
+        <h1>Our School Gallery</h1>
+        <p>Explore the Moments Captured at Our academy</p>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-images">
+            <img src="https://paintpotsnurseries.co.uk/wp-content/uploads/2021/06/children-playing.jpg" alt="Activity 11">
+            <img src="https://assets.brighthorizons.co.uk/-/media/BH/Bright-Horizons/Blog/2020/10/nursery-environment-2.jpg" alt="Activity 12">
+            <img src="https://www.twinkletoesdaynursery.co.uk/wp-content/uploads/2019/03/Nursery-or-Day-Care-Stourbridge.jpg" alt="Activity 13">
+            <img src="https://images.ctfassets.net/ji7dv0z3wcnz/2dpkD7mDQ7mH3iggc78S5U/94d4ea78f957964993621f6a89550c7e/DayCare.jpg" alt="Activity 14">
+            <img src="https://medixcollege.ca/wp-content/uploads/2023/08/July-14-early-childhood-assistant-course.jpg" alt="Activity 15">
+            <img src="https://i0.wp.com/www.andersoncollege.com/wp-content/uploads/2024/05/happy-mature-teacher-and-group-of-intercultural-li-2023-11-27-05-07-19-utc-lowres-e1717180819951.jpg" alt="Activity 16">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-X9EMJXuMNWJlIdaVzuYU6QVYqTb7mZIFVw&s" alt="Activity 1">
+            <img src="https://cms-tc.pbskids.org/parents/Helping-Kids-Handle-Change-at-School.jpg" alt="Activity 2">
+            <img src="https://static01.nyt.com/images/2019/08/21/multimedia/21-parenting-homevisit/21-parenting-homevisit-articleLarge.jpg" alt="Activity 3">
+            <img src="https://www.livingwaters.wa.edu.au/wp-content/uploads/2021/05/DSC4938x-500x333.jpg" alt="Activity 4">
+            <img src="https://washingtonparent.com/wp-content/uploads/2024/08/Untitled-design-79.jpg" alt="Activity 5">
+            <img src="https://www.holyfamilydbq.org/wp-content/uploads/2021/11/IMG_1507-1024x684.jpg" alt="Activity 6">
+            <img src="https://www.ftc.net/wp-content/uploads/2024/04/Teacher-helping-student-with-laptop.jpg" alt="Activity 7">
+            <img src="https://static.scientificamerican.com/sciam/cache/file/37D0C444-9D61-4921-B9D47E7E60D2DE75_source.jpg" alt="Activity 8">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqk-b7gTC6kNSlRTHIqUjsurdHsdA2v7JqbA&s" alt="Activity 9">
+            <img src="https://cdn.pickr.com.au/wp-content/uploads/2022/01/back-to-school-laptop-guide-kid-using-laptop.jpg" alt="Activity 10">
+           
+            
+        </div>
+    </section>
+
+    <!-- Footer with contact and social links -->
+    <footer>
+        <p>&copy; 2024 Kigali Hillside Academy. All Rights Reserved.</p>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a>
+        </p>
+    </footer>
+</body>
 </html>
