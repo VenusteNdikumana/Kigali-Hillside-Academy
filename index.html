@@ -22,42 +22,56 @@
             min-height: 100vh;
         }
 
+        /* Header banner styling */
         header {
-            background-color: #ffffff;
-            color: hsl(0, 0%, 0%);
-            padding: 10px 20px;
+            background-color: #004aad; /* Banner color */
+            color: white;
+            padding: 10px;
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
+            position: relative;
         }
 
         header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
             height: 80px;
             width: auto;
-            margin-right: 15px;
         }
 
         header h1 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin: 0;
+            padding: 0;
         }
 
-        /* Navbar */
+        header p {
+            margin: 5px 0 0;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* Navbar styling as part of banner */
+        .navbar {
+            background-color: #248a3e; /* Match header for banner effect */
+        }
+
         .navbar ul {
             list-style-type: none;
             display: flex;
             justify-content: center;
-            background-color: #248a3e;
             padding: 10px 0;
-            flex-wrap: wrap;
+            margin: 0;
         }
 
         .navbar li {
-            margin: 5px;
+            margin: 0 10px;
         }
 
         .navbar a {
-            color: rgb(20, 18, 18);
+            color: white;
             text-align: center;
             padding: 10px 15px;
             text-decoration: none;
@@ -127,7 +141,7 @@
         /* Responsive Styles */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
 
             .navbar ul {
@@ -141,16 +155,12 @@
         }
 
         @media (max-width: 480px) {
-            header {
-                padding: 10px;
-            }
-
             header img {
                 height: 60px;
             }
 
             header h1 {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
 
             footer {
@@ -186,7 +196,7 @@
         <img src="logo.png" alt="Kigali Hillside Academy Logo">
         <div>
             <h1>KIGALI HILLSIDE ACADEMY</h1>
-            <p><strong><i>Your Future Begins with Hard Work and Discipline</i></strong></p>
+            <p>Your Future Begins with Hard Work and Discipline</p>
         </div>
     </header>
 
