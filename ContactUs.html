@@ -1,90 +1,160 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us Form</title>
     <style>
+        /* Reset and Global Styling */
         * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   background-image: url("https://lh5.googleusercontent.com/proxy/Jgo-RmKX0nHDTtlyUgnFv_x-Ppa_r7MmX58HJQLaYr_pEFNSwuf7bu3kriusBaJUVdjFqlhHUM7CCiqaPUiUMMDhum1PYFHPxCosodeMw268xisp45-bVmA");
-}
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url("https://st2.depositphotos.com/3252397/8388/i/450/depositphotos_83882494-stock-photo-keyboard-contact-us-black.jpg");
+            background-size: cover;
+            background-position: center;
+        }
 
-.contact-form {
-    width: 320px;
-    padding: 20px;
-    background-color: #22170a;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border: 2px solid #444;
-    border-radius: 5px;
-    text-align: center;
-}
+        /* Header Styling */
+        .header {
+            width: 100%;
+            background: #8b6433;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            border-bottom: 2px solid #7f6a6a;
+        }
 
-.contact-form h2 {
-    background-color: #d46c5b;
-    color: white;
-    padding: 10px 0;
-    font-size: 24px;
-    margin-bottom: 20px;
-    border-radius: 5px 5px 0 0;
-}
+        .header h1 {
+            font-size: 2rem;
+        }
 
-.contact-form input, 
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #f3d4a0;
-    border-radius: 5px;
-    font-size: 16px;
-}
+        /* Contact Form Styling */
+        .contact-form {
+            flex: 1; /* This allows the form to take up remaining space */
+            display: flex;
+            justify-content: right;
+            align-items: right;
+        }
 
-.contact-form input::placeholder, 
-.contact-form textarea::placeholder {
-    color: #b3a38f;
-}
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #22170a;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 2px solid #444;
+            border-radius: 5px;
+            text-align: center;
+        }
 
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #15ff00;
-    color: #000;
-    font-weight: bold;
-    border: 2px solid #000;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
+        .form-container h2 {
+            background-color: #d46c5b;
+            color: white;
+            padding: 10px 0;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-radius: 5px 5px 0 0;
+        }
 
-.contact-form button:hover {
-    background-color: #e5be00;
-}
+        .form-container input, 
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #f3d4a0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
 
+        .form-container input::placeholder, 
+        .form-container textarea::placeholder {
+            color: #b3a38f;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #15ff00;
+            color: #000;
+            font-weight: bold;
+            border: 2px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container button:hover {
+            background-color: #e5be00;
+        }
+
+        /* Footer Styling */
+        .footer {
+            width: 100%;
+            background: #815826;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            border-top: 2px solid #6f6161;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .form-container h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer p {
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1>Get in Touch!</h1>
+    </header>
+
+    <!-- Contact Form Section -->
     <div class="contact-form">
-        <h2>Contact Us!</h2>
-        <form>
-            <input type="text" placeholder="Name......" required>
-            <input type="email" placeholder="Email....." required>
-            <input type="text" placeholder="Subject....." required>
-            <textarea placeholder="Message........" rows="4" required></textarea>
-            <button type="submit">SEND MESSAGE</button>
-        </form>
+        <div class="form-container">
+            <h2>Fill out the form</h2>
+            <form>
+                <input type="text" placeholder="Name......" required>
+                <input type="email" placeholder="Email....." required>
+                <input type="text" placeholder="Subject....." required>
+                <textarea placeholder="Message........" rows="4" required></textarea>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Don't hesitate, Contact us</p>
+        <p>&copy; <span id="year"></span> Kigali Hillside Academy. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Display Current Year in Footer -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
