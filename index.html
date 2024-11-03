@@ -17,26 +17,29 @@
             background-size: cover;
             background-position: center;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
             background-color: #ffffff;
             color: hsl(0, 0%, 0%);
-            padding: 20px;
-            text-align: center;
+            padding: 10px 20px;
             display: flex;
-            flex-direction: column;
             align-items: center;
+            justify-content: flex-start;
         }
 
         header img {
-            height: 100px;
+            height: 80px;
             width: auto;
-            margin-bottom: 10px;
+            margin-right: 15px;
         }
 
         header h1 {
             font-size: 1.5rem;
+            margin: 0;
         }
 
         /* Navbar */
@@ -93,6 +96,13 @@
             display: block;
         }
 
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Footer styling */
         footer {
             background-color: #f4f4f4;
             color: #333;
@@ -100,6 +110,7 @@
             padding: 10px;
             font-size: 0.9rem;
             border-top: 1px solid #ddd;
+            width: 100%;
         }
 
         footer a {
@@ -135,7 +146,7 @@
             }
 
             header img {
-                height: 80px;
+                height: 60px;
             }
 
             header h1 {
@@ -143,16 +154,40 @@
             }
 
             footer {
+                position: static;
                 font-size: 0.8rem;
             }
+        }
+
+        /* Footer sticky at bottom only on larger screens */
+        @media (min-width: 769px) {
+            footer {
+                position: fixed;
+                bottom: 0;
+            }
+        }
+
+        /* Image styling */
+        .marquee img {
+            height: 300px;
+            width: auto;
+            margin: 10px;
+        }
+
+        .static-images img {
+            height: 300px;
+            width: auto;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Kigali Hillside Academy Logo" style="float:left;">
-        <h1>KIGALI HILLSIDE ACADEMY</h1>
-        <p><strong><i>Your Future Begins with Hard Work and Discipline</i></strong></p>
+        <img src="logo.png" alt="Kigali Hillside Academy Logo">
+        <div>
+            <h1>KIGALI HILLSIDE ACADEMY</h1>
+            <p><strong><i>Your Future Begins with Hard Work and Discipline</i></strong></p>
+        </div>
     </header>
 
     <div class="navbar">
@@ -170,17 +205,21 @@
                     <a href="iphone_calculator.html">Student Calculator</a>
                 </div>
             </li>
-            <li><a href="galley.html">Gallery</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="ContactUs.html">Contact Us</a></li>
         </ul>
     </div>
 
     <main>
-        <marquee behavior="alternate" scrollamount="5">
-            <img src="https://i.pinimg.com/736x/13/1c/e5/131ce50bf2a9e741c8848f97e4f1110f.jpg" alt="Image 1" style="height: 200px; margin: 10px;">
-            <img src="https://degrees.snu.edu/hs-fs/hubfs/AdobeStock_518657595.jpeg" alt="Image 2" style="height: 200px; margin: 10px;">
-            <img src="https://cdn.firstcry.com/education/2022/06/04170649/1893649654.jpg" alt="Image 3" style="height: 200px; margin: 10px;">
-        </marquee>
+        <div class="marquee">
+            <marquee behavior="alternate" scrollamount="5">
+                <img src="https://i.pinimg.com/736x/13/1c/e5/131ce50bf2a9e741c8848f97e4f1110f.jpg" alt="Image 1">
+            </marquee>
+        </div>
+        <div class="static-images">
+            <img src="https://degrees.snu.edu/hs-fs/hubfs/AdobeStock_518657595.jpeg" alt="Image 2">
+            <img src="https://cdn.firstcry.com/education/2022/06/04170649/1893649654.jpg" alt="Image 3">
+        </div>
     </main>
 
     <footer>
