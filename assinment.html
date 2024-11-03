@@ -1,72 +1,115 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment Results</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
             background-image: url("https://www.iseeme.com/wp-content/uploads/2019/05/01-01-Hero-715x477.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            margin: 0;
+            padding: 0;
         }
-        h2 {
+        h1, h2 {
             color: #000000;
-            text-align:left;
+            text-align: center;
+            margin: 20px 0;
         }
+
+        /* Header Styles */
+        header {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Card Styles */
         .assignment-card {
             width: 80%;
+            max-width: 500px;
             margin: 20px auto;
             padding: 15px;
             background-color: #fff;
             border-left: 5px solid #004080;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+            color: #333;
         }
         .assignment-card h3 {
             margin: 0;
-            color: #333;
+            font-size: 1.2rem;
         }
         .assignment-card p {
             margin: 5px 0;
             color: #555;
         }
+
+        /* Footer Styles */
+        footer {
+            background-color: #fdfdfd;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .assignment-card {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
-    <h2>Assignments Portal</h2>
+    <!-- Header -->
+    <header>
+        <h1>Assignment Results</h1>
+    </header>
+
+    <!-- Assignments Section -->
+    <h2>Your Assignments</h2>
     <div class="assignment-card">
         <h3>Math Assignment</h3>
         <p>Due Date: Nov 08, 2024</p>
-        <p>Details: You got 24/25 Pts.</p>
+        <p>Details: You scored 24/25 points.</p>
     </div>
     <div class="assignment-card">
-        <h3>Musics</h3>
-        <p>Due Date: Nov 4, 2024</p>
-        <p>Details: You have got 25/25 Pts.</p>
+        <h3>Music</h3>
+        <p>Due Date: Nov 04, 2024</p>
+        <p>Details: You scored 25/25 points.</p>
     </div>
     <div class="assignment-card">
-        <h3>Electronics </h3>
-        <p>Due Date: Nov 4, 2024</p>
-        <p>Details: You have got 25/25 Pts.</p>
+        <h3>Electronics</h3>
+        <p>Due Date: Nov 04, 2024</p>
+        <p>Details: You scored 25/25 points.</p>
     </div>
     <div class="assignment-card">
-        <h3>Drama </h3>
-        <p>Due Date: Oct 4, 2024</p>
-        <p>Details: You have got 2025 Pts.</p>
+        <h3>Drama</h3>
+        <p>Due Date: Oct 04, 2024</p>
+        <p>Details: You scored 20/25 points.</p>
     </div>
     <div class="assignment-card">
         <h3>ICT</h3>
-        <p>Due Date: Nov 8, 2024</p>
-        <p>Details: You have got 20/25 Pts.</p>
+        <p>Due Date: Nov 08, 2024</p>
+        <p>Details: You scored 20/25 points.</p>
     </div>
     <div class="assignment-card">
         <h3>Arts</h3>
-        <p>Due Date: Nov 4, 2024</p>
-        <p>Details: You have got 24/25 Pts.</p>
+        <p>Due Date: Nov 04, 2024</p>
+        <p>Details: You scored 24/25 points.</p>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Kigali Hillside Academy. All rights reserved.</p>
+    </footer>
 </body>
 </html>
