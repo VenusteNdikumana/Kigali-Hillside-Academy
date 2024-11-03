@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,46 +9,85 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #c2e5cb;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the footer stays at the bottom */
+            background-image: url(https://gosignmeup.com/wp-content/uploads/studentportallogobig.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:rgb(64, 254, 6)
         }
+
         header {
-            background-color: yellow;
+            background-color: rgb(52, 153, 75);
             color: black;
             padding: 20px;
             text-align: center;
         }
+
         nav {
             display: flex;
             justify-content: center;
-            background-color: pink;
+            background-color: rgb(3, 0, 1);
         }
+
         nav a {
             color: white;
             padding: 15px 20px;
             text-decoration: none;
+            transition: background-color 0.3s ease; /* Smooth transition */
         }
+
         nav a:hover {
             background-color: #20d766;
         }
+
         section {
             padding: 40px;
             text-align: center;
+            flex: 1; /* This allows the section to take up remaining space */
+        }
+
+        footer {
+            background-color: rgb(3, 0, 1);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column; /* Stack links on smaller screens */
+            }
+
+            nav a {
+                padding: 10px;
+                text-align: center; /* Center align for mobile */
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>STUDENT PORTAL</h1>
-        <p>Your Future Begins with hard work and discipline</p>
+        <p><i>Your Future Begins with hard work and discipline</i></p>
     </header>
     <nav>
         <a href="attendance.html">Attendance</a>
         <a href="grade.html">Grades</a>
-        <a href="assinment.html">Assignments</a>
+        <a href="assignment.html">Assignments</a>
     </nav>
     <section>
-        <h2>Explore our school programs!</h2>
+        <h2>Explore your portal</h2>
         <p>Click on the links above to access various functionalities.</p>
     </section>
+    <footer>
+        <p>&copy; 2024 Kigali hillside Academy |All rights reserved <a href="contact.html" style="color: #20d766;">Contact Us</a></p>
+    </footer>
 </body>
 </html>
