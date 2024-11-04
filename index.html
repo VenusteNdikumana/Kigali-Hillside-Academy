@@ -3,11 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    <!-- Inline CSS -->
+    <title>Kigali Hillside Academy</title>
     <style>
-        /* Basic Footer Styling */
-        footer {
+        /* Basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?cs=srgb&dl=pexels-pixabay-53594.jpg&fm=jpg);
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header banner styling */
+        header {
+            background-color: white;
+            color: black;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 107px;
+            width: auto;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #248a3e;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 0 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1rem;
+            display: block;
+        }
+
+        .navbar a:hover {
+            background-color: red;
+            color: white;
+        }
+
+        /* Dropdown styling */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+ 
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                height: 60px;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            
+        }
+
+      footer {
             background-color: #2c2c2c;
             color: #ffffff;
             padding: 40px 0;
@@ -139,13 +278,54 @@
                 font-size: 12px; /* Adjust bottom footer text size */
             }
         }
+
+        
     </style>
 </head>
 <body>
-    <!-- Page content -->
+    <header>
+        <img src="logo.png" alt="Kigali Hillside Academy Logo">
+        <div>
+            <h1>KIGALI HILLSIDE ACADEMY</h1>
+            <p>Your Future Begins with Hard Work and Discipline</p>
+        </div>
+    </header>
 
-    <!-- Footer -->
-    <footer>
+    <div class="navbar">
+        <ul>
+            <li><a href="Pagecontent.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="OurPrograms.html">Our Programs</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Account &nbsp;<span>&#x25BC;</span></a>
+                <div class="dropdown-content">
+                    <a href="Account.html">Create Account</a>
+                    <a href="registrationform.html">Registration</a>
+                    <a href="login.html">Login</a>
+                </div>
+            </li>
+         
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">My Portal &nbsp;<span>&#x25BC;</span></a>
+                <div class="dropdown-content">
+                    <a href="attendance.html">Attendance</a>
+                    <a href="grade.html">Grade</a>
+                    <a href="assignment.html">Assignment</a>
+                    <a href="iphone_calculator.html">Student Calculator</a>
+                </div>
+            </li>
+         
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+
+    <!-- Video element with loop enabled -->
+    <video width="100%" controls autoplay muted loop>
+        <source src="https://redirector.googlevideo.com/videoplayback?expire=1730724996&ei=JHAoZ7K4KuX5sfIPlsnqqQs&ip=2a01%3A4ff%3A1f0%3A8353%3A1d1%3A8a5e%3Afa2a%3Ac2b&id=o-ABKCjEJzOYCiEr4iEroEMnJSfEAi17MqHPWLDLWI52FI&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1730703396%2C&mh=R6&mm=31%2C26&mn=sn-nx57ynsd%2Csn-a5mlrnlz&ms=au%2Conr&mv=m&mvi=5&pl=56&rms=au%2Cau&initcwndbps=1622500&siu=1&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=97.250&lmt=1697267969078124&mt=1730702952&fvip=1&fexp=51312688%2C51326932&c=ANDROID&txp=6218224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Csiu%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAO6w29h2Z_WTmDv3gyEqj2HsNwC12Qg-GazwI_2PfCC1AiBHjiS3Bxj5aGBDCY5_zzu4KZRDaI0iGCpXD9_Ssxm-kQ%3D%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=ACJ0pHgwRAIgBrGsg414gzXZVRu9Lzrfn8a0JGqlWjc3LXGlAj8arF0CIHvFacPFdK2BhgoEE36uH5qHG5-25D_Otf48uPFJXxdV&title=APADE+NURSERY+GRADUATION+CEREMONY+HIGHLIGHT%20-%20Downloaded%20from%20clipzag.com&extension=mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+  <footer>
         <div class="footer-container">
             <!-- About Us Section -->
             <div class="footer-section about-us">
@@ -207,5 +387,8 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
