@@ -31,6 +31,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            flex-direction: column;
         }
 
         header img {
@@ -45,14 +46,15 @@
             font-size: 1.8rem;
             margin: 0;
             padding: 0;
+            text-align: center; /* Center text */
         }
 
         header p {
             margin: 5px 0 0;
             font-style: italic;
             font-weight: bold;
+            text-align: center; /* Center text */
         }
-
 
         /* Navbar styling */
         .navbar {
@@ -65,6 +67,7 @@
             justify-content: center;
             padding: 10px 0;
             margin: 0;
+            flex-wrap: wrap; /* Allow wrapping */
         }
 
         .navbar li {
@@ -116,37 +119,9 @@
             padding: 20px;
             text-align: center;
         }
- 
 
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            .navbar ul {
-                flex-direction: column;
-            }
-
-            .navbar a {
-                font-size: 0.9rem;
-                padding: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header img {
-                height: 60px;
-            }
-
-            header h1 {
-                font-size: 1.2rem;
-            }
-
-            
-        }
-
-      footer {
+        /* Footer styling */
+        footer {
             background-color: #2c2c2c;
             color: #ffffff;
             padding: 40px 0;
@@ -164,6 +139,7 @@
             flex: 1;
             min-width: 180px;
             margin: 20px;
+            text-align: left; /* Default text alignment */
         }
 
         .footer-section h3 {
@@ -250,8 +226,22 @@
 
         /* Media Queries */
         @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .navbar ul {
+                flex-direction: column; /* Stack navbar items */
+                align-items: center; /* Center align items */
+            }
+
+            .navbar a {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+
             .footer-container {
-                flex-direction: column; /* Stack sections vertically on smaller screens */
+                flex-direction: column; /* Stack sections vertically */
                 align-items: center; /* Center align items */
             }
 
@@ -261,17 +251,25 @@
             }
 
             .footer-section .newsletter input[type="email"] {
-                width: 90%; /* Increase width of input on smaller screens */
+                width: 90%; /* Increase width of input */
             }
         }
 
         @media (max-width: 480px) {
+            header img {
+                height: 60px;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
             .footer-section h3 {
-                font-size: 16px; /* Reduce heading size on very small screens */
+                font-size: 16px; /* Reduce heading size */
             }
 
             .footer-section p, .footer-section ul, .footer-section form {
-                font-size: 12px; /* Reduce font size for better readability */
+                font-size: 12px; /* Reduce font size */
             }
 
             .footer-bottom {
@@ -279,7 +277,6 @@
             }
         }
 
-        
     </style>
 </head>
 <body>
@@ -304,7 +301,6 @@
                     <a href="login.html">Login</a>
                 </div>
             </li>
-         
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">My Portal &nbsp;<span>&#x25BC;</span></a>
                 <div class="dropdown-content">
@@ -314,81 +310,53 @@
                     <a href="iphone_calculator.html">Student Calculator</a>
                 </div>
             </li>
-         
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="ContactUs.html">Contact Us</a></li>
         </ul>
+    </div>
 
     <!-- Video element with loop enabled -->
     <video width="100%" controls autoplay muted loop>
-        <source src="https://redirector.googlevideo.com/videoplayback?expire=1730724996&ei=JHAoZ7K4KuX5sfIPlsnqqQs&ip=2a01%3A4ff%3A1f0%3A8353%3A1d1%3A8a5e%3Afa2a%3Ac2b&id=o-ABKCjEJzOYCiEr4iEroEMnJSfEAi17MqHPWLDLWI52FI&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1730703396%2C&mh=R6&mm=31%2C26&mn=sn-nx57ynsd%2Csn-a5mlrnlz&ms=au%2Conr&mv=m&mvi=5&pl=56&rms=au%2Cau&initcwndbps=1622500&siu=1&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&cnr=14&ratebypass=yes&dur=97.250&lmt=1697267969078124&mt=1730702952&fvip=1&fexp=51312688%2C51326932&c=ANDROID&txp=6218224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Csiu%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAO6w29h2Z_WTmDv3gyEqj2HsNwC12Qg-GazwI_2PfCC1AiBHjiS3Bxj5aGBDCY5_zzu4KZRDaI0iGCpXD9_Ssxm-kQ%3D%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=ACJ0pHgwRAIgBrGsg414gzXZVRu9Lzrfn8a0JGqlWjc3LXGlAj8arF0CIHvFacPFdK2BhgoEE36uH5qHG5-25D_Otf48uPFJXxdV&title=APADE+NURSERY+GRADUATION+CEREMONY+HIGHLIGHT%20-%20Downloaded%20from%20clipzag.com&extension=mp4" type="video/mp4">
+        <source src="https://redirector.googlevideo.com/videoplayback?expire=1730724996&ei=JHAoZ7K4KuX5sfYPp5m9sAc&ip=37.58.55.243&id=o-AB52LX7kBL1ty57D4Ao11CiTzPQ35yAS8O95nlkGf_lP&itag=22&source=youtube&requiressl=yes&mm=31%2C29&mn=sn-4g5edn7s%2Csn-4g5edn7s&ms=au%2Crdu&mv=m&mvi=4&pl=20&initcwndbps=304750&vprv=1&mime=video%2Fmp4&lmt=1635227510835162&mt=1696824611&fvip=4&fexp=24007246&c=WEB&txp=5435432&n=2o5b_aDF8H1LvQ&sparams=expire%2Cei%2Cid%2Citag%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps%2Cvprv%2Cmime%2Clmt&sig=AOq0QJ5P3xF6pPMFFBQ6q5uTWyGKwzFBL2k4A0u7INhPphn_PB9TPURF0HShgU1cGQnxdGmN43i_A73gDLA_9PGgFA6QbqU8FggcG0F4L8B2IoL2blzR-EecR9lzX6E4PmtmRr6y-Ivs0DLO6i8SFLHqSRjGcUbexi9khGqvaQzGp6XsbwxZ1_oI9Gm60&lsparams=mm%2Cmn%2Cms%2Cmv%2Cmvi&lsig=AGlaD20Tg-4IWS3KeBPGfEJ1CyBhAN6QsDmpSof3Hdo_Ryffh_FexRtHT7I-9mLSYRYi7JH5P7LY9X6EdbhMXW5Ty3sP5p82Aez1&title=kenya+drone+footage" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-  <footer>
+    <main>
+        <h2>Welcome to Kigali Hillside Academy</h2>
+        <p>We provide quality education that empowers students to excel.</p>
+    </main>
+
+    <footer>
         <div class="footer-container">
-            <!-- About Us Section -->
-            <div class="footer-section about-us">
+            <div class="footer-section">
                 <h3>About Us</h3>
-                <p>Learn more about our journey, values, and dedication to providing quality education and services.</p>
+                <p>Kigali Hillside Academy is dedicated to providing quality education to all students.</p>
+ 
             </div>
-            
-            <!-- Customer Service Section -->
-            <div class="footer-section customer-service">
-                <h3>Service</h3>
-                <ul>
-                    <li><a href="#">Help & FAQs</a></li>
-                    <li><a href="#">Staffs</a></li>
-                    <li><a href="#">Partners</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
-            </div>
-
-            <!-- Quick Links Section -->
-            <div class="footer-section quick-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Our Programs</a></li>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Gallery</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Information -->
-            <div class="footer-section contact-info">
+            <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p>Email: support@kigalihillside.com</p>
+                <p>Email: info@kigalihillsideacademy.com</p>
                 <p>Phone: +250799375874</p>
-                <p>Address: 34 Main St, Kigali City</p>
             </div>
-
-            <!-- Social Media Links -->
-            <div class="footer-section social-media">
+            <div class="footer-section">
                 <h3>Follow Us</h3>
-                <a href="#"><p>Facebook</p></a>
-                <a href="#"><p>Twitter/X</p></a>
-                <a href="#"><p>Instagram</p></a>
-                <a href="#"><p>LinkedIn</p></a>
+                <div class="social-media">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
             </div>
-
-            <!-- Newsletter Subscription -->
             <div class="footer-section newsletter">
-                <h3>Subscribe to Our Newsletter</h3>
-                <form action="#">
+                <h3>Subsribe us</h3>
+                <form>
                     <input type="email" placeholder="Enter your email">
                     <button type="submit">Subscribe</button>
                 </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Kigali Hillside Academy. All rights reserved.</p>
-            <p>Terms | Privacy Policy | Site Map</p>
+            <p>&copy; 2024 Kigali Hillside Academy | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
