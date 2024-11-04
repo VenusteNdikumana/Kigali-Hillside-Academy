@@ -3,124 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kigali Hillside Academy</title>
+    <title>Your Website</title>
+    <!-- Inline CSS -->
     <style>
-        /* Basic styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url(https://images.pexels.com/photos/53594/blue-clouds-day-fluffy-53594.jpeg?cs=srgb&dl=pexels-pixabay-53594.jpg&fm=jpg);
-            background-size: cover;
-            background-position: center;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Header banner styling */
-        header {
-            background-color: white;
-            color: black;
-            padding: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            flex-direction: column;
-        }
-
-        header img {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            height: 107px;
-            width: auto;
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-            margin: 0;
-            padding: 0;
-            text-align: center; /* Center text */
-        }
-
-        header p {
-            margin: 5px 0 0;
-            font-style: italic;
-            font-weight: bold;
-            text-align: center; /* Center text */
-        }
-
-        /* Navbar styling */
-        .navbar {
-            background-color: #248a3e;
-        }
-
-        .navbar ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-            margin: 0;
-            flex-wrap: wrap; /* Allow wrapping */
-        }
-
-        .navbar li {
-            margin: 0 10px;
-        }
-
-        .navbar a {
-            color: white;
-            text-align: center;
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 1rem;
-            display: block;
-        }
-
-        .navbar a:hover {
-            background-color: red;
-            color: white;
-        }
-
-        /* Dropdown styling */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        main {
-            flex: 1;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Footer styling */
+        /* Basic Footer Styling */
         footer {
             background-color: #2c2c2c;
             color: #ffffff;
@@ -139,7 +25,6 @@
             flex: 1;
             min-width: 180px;
             margin: 20px;
-            text-align: left; /* Default text alignment */
         }
 
         .footer-section h3 {
@@ -226,22 +111,8 @@
 
         /* Media Queries */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            .navbar ul {
-                flex-direction: column; /* Stack navbar items */
-                align-items: center; /* Center align items */
-            }
-
-            .navbar a {
-                font-size: 0.9rem;
-                padding: 10px;
-            }
-
             .footer-container {
-                flex-direction: column; /* Stack sections vertically */
+                flex-direction: column; /* Stack sections vertically on smaller screens */
                 align-items: center; /* Center align items */
             }
 
@@ -251,112 +122,90 @@
             }
 
             .footer-section .newsletter input[type="email"] {
-                width: 90%; /* Increase width of input */
+                width: 90%; /* Increase width of input on smaller screens */
             }
         }
 
         @media (max-width: 480px) {
-            header img {
-                height: 60px;
-            }
-
-            header h1 {
-                font-size: 1.2rem;
-            }
-
             .footer-section h3 {
-                font-size: 16px; /* Reduce heading size */
+                font-size: 16px; /* Reduce heading size on very small screens */
             }
 
             .footer-section p, .footer-section ul, .footer-section form {
-                font-size: 12px; /* Reduce font size */
+                font-size: 12px; /* Reduce font size for better readability */
             }
 
             .footer-bottom {
                 font-size: 12px; /* Adjust bottom footer text size */
             }
         }
-
     </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Kigali Hillside Academy Logo">
-        <div>
-            <h1>KIGALI HILLSIDE ACADEMY</h1>
-            <p>Your Future Begins with Hard Work and Discipline</p>
-        </div>
-    </header>
+    <!-- Page content -->
 
-    <div class="navbar">
-        <ul>
-            <li><a href="Pagecontent.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="OurPrograms.html">Our Programs</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Account &nbsp;<span>&#x25BC;</span></a>
-                <div class="dropdown-content">
-                    <a href="Account.html">Create Account</a>
-                    <a href="registrationform.html">Registration</a>
-                    <a href="login.html">Login</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">My Portal &nbsp;<span>&#x25BC;</span></a>
-                <div class="dropdown-content">
-                    <a href="attendance.html">Attendance</a>
-                    <a href="grade.html">Grade</a>
-                    <a href="assignment.html">Assignment</a>
-                    <a href="iphone_calculator.html">Student Calculator</a>
-                </div>
-            </li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="ContactUs.html">Contact Us</a></li>
-        </ul>
-    </div>
-
-    <!-- Video element with loop enabled -->
-    <video width="100%" controls autoplay muted loop>
-        <source src="https://redirector.googlevideo.com/videoplayback?expire=1730724996&ei=JHAoZ7K4KuX5sfYPp5m9sAc&ip=37.58.55.243&id=o-AB52LX7kBL1ty57D4Ao11CiTzPQ35yAS8O95nlkGf_lP&itag=22&source=youtube&requiressl=yes&mm=31%2C29&mn=sn-4g5edn7s%2Csn-4g5edn7s&ms=au%2Crdu&mv=m&mvi=4&pl=20&initcwndbps=304750&vprv=1&mime=video%2Fmp4&lmt=1635227510835162&mt=1696824611&fvip=4&fexp=24007246&c=WEB&txp=5435432&n=2o5b_aDF8H1LvQ&sparams=expire%2Cei%2Cid%2Citag%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps%2Cvprv%2Cmime%2Clmt&sig=AOq0QJ5P3xF6pPMFFBQ6q5uTWyGKwzFBL2k4A0u7INhPphn_PB9TPURF0HShgU1cGQnxdGmN43i_A73gDLA_9PGgFA6QbqU8FggcG0F4L8B2IoL2blzR-EecR9lzX6E4PmtmRr6y-Ivs0DLO6i8SFLHqSRjGcUbexi9khGqvaQzGp6XsbwxZ1_oI9Gm60&lsparams=mm%2Cmn%2Cms%2Cmv%2Cmvi&lsig=AGlaD20Tg-4IWS3KeBPGfEJ1CyBhAN6QsDmpSof3Hdo_Ryffh_FexRtHT7I-9mLSYRYi7JH5P7LY9X6EdbhMXW5Ty3sP5p82Aez1&title=kenya+drone+footage" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <main>
-        <h2>Welcome to Kigali Hillside Academy</h2>
-        <p>We provide quality education that empowers students to excel.</p>
-    </main>
-
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <div class="footer-section">
+            <!-- About Us Section -->
+            <div class="footer-section about-us">
                 <h3>About Us</h3>
-                <p>Kigali Hillside Academy is dedicated to providing quality education to all students.</p>
- 
+                <p>Learn more about our journey, values, and dedication to providing quality education and services.</p>
             </div>
-            <div class="footer-section">
+            
+            <!-- Customer Service Section -->
+            <div class="footer-section customer-service">
+                <h3>Service</h3>
+                <ul>
+                    <li><a href="#">Help & FAQs</a></li>
+                    <li><a href="#">Staffs</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Our Programs</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-section contact-info">
                 <h3>Contact Us</h3>
-                <p>Email: info@kigalihillsideacademy.com</p>
+                <p>Email: support@kigalihillside.com</p>
                 <p>Phone: +250799375874</p>
+                <p>Address: 34 Main St, Kigali City</p>
             </div>
-            <div class="footer-section">
+
+            <!-- Social Media Links -->
+            <div class="footer-section social-media">
                 <h3>Follow Us</h3>
-                <div class="social-media">
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Instagram</a>
-                </div>
+                <a href="#"><p>Facebook</p></a>
+                <a href="#"><p>Twitter/X</p></a>
+                <a href="#"><p>Instagram</p></a>
+                <a href="#"><p>LinkedIn</p></a>
             </div>
+
+            <!-- Newsletter Subscription -->
             <div class="footer-section newsletter">
-                <h3>Subsribe us</h3>
-                <form>
+                <h3>Subscribe to Our Newsletter</h3>
+                <form action="#">
                     <input type="email" placeholder="Enter your email">
                     <button type="submit">Subscribe</button>
                 </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Kigali Hillside Academy | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+            <p>&copy; 2024 Kigali Hillside Academy. All rights reserved.</p>
+            <p>Terms | Privacy Policy | Site Map</p>
         </div>
     </footer>
+
 </body>
 </html>
