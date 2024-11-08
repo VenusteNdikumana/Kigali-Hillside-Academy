@@ -17,7 +17,9 @@
         header {
             background-color: #333;
             color: white;
-            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             text-align: center;
         }
 
@@ -27,6 +29,7 @@
         .programs {
             padding: 2rem 1rem;
             text-align: center;
+        
         }
 
         .programs h1 {
@@ -35,12 +38,23 @@
             margin-bottom: 1.5rem;
         }
 
+.program :hover {transform: scale(1.05);
+    cursor: pointer;
+    background-color:#688fc9;}
+
+    .programs:hover {transform: scale(1.05);
+    cursor: pointer;
+    background-color:orangered;
+    }
         .program {
             display: inline-block;
             width: 30%;
             padding: 1rem;
             text-align: center;
             vertical-align: top;
+            
+            
+            
         }
 
         .program img {
@@ -67,7 +81,10 @@
             background-color: #333;
             color: rgb(255, 255, 255);
             text-align: center;
-            padding: 25px;
+            position: relative;
+            bottom: 0;
+            z-index: 1000;
+            padding: 30px;
         }
 
         footer p {
@@ -96,16 +113,150 @@
                 margin-bottom: 2rem;
             }
         }
+
+        header img {
+            height: 107px;
+            width: auto;
+            /* Removed float: right to ensure it stays in its flex context */
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            padding: 0;
+            text-align: left; /* Ensures text is aligned to the left */
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #248a3e;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 0 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1rem;
+            display: block;
+        }
+
+        .navbar a:hover {
+            background-color: red;
+            color: white;
+        }
+
+        /* Dropdown styling */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+            }
+
+            .navbar a {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                height: 60px;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
 
 <!-- Header -->
 <header>
-    <h1>Welcome to Our School Programs</h1>
+    <h1>Navigate our Academy's Programs</h1>
     <p>Building a brighter future for every learner</p>
 </header>
-
+<div class="navbar">
+    <ul>
+        <li><a href="Pagecontent-test.html"><h3><b>Home</b></h3></a></li>
+        <li><a href="history.html"><h3><b>History</b></h3></a></li>
+        <li><a href="aboutus.html"><h3><b>About Us</b></h3></a></li>
+        <li><a href="OurPrograms.html"><h3><b>Our Programs</b></h3></a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn"><h3><b>Account</b></h3> &nbsp;<span>&#x25BC;</span></a>
+            <div class="dropdown-content">
+                <a href="Account.html">Create Account</a>
+                <a href="registrationform.html">Registration</a>
+                <a href="login.html">Login</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn"><h3><b>My Portal</b></h3> &nbsp;<span>&#x25BC;</span></a>
+            <div class="dropdown-content">
+                <a href="attendance.html">Attendance</a>
+                <a href="grade.html">Grade</a>
+                <a href="assignment.html">Assignment</a>
+                <a href="iphone_calculator.html">Student Calculator</a>
+            </div>
+        </li>
+        <li><a href="gallery.html"><h3><b>Gallery</b></h3></a></li>
+        <li><a href="ContactUs.html"><h3><b>Contact Us</b></h3></a></li>
+    </ul>
+</div>
 <!-- Programs Section -->
 <section class="programs" id="programs">
     <h1>Our Programs</h1>
@@ -128,11 +279,11 @@
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2024 Our School Programs. All rights reserved.</p>
-    <div class="social-icons">
-        <a href="#">Facebook</a> | 
-        <a href="#">Twitter</a> | 
-        <a href="#">Instagram</a>
+    <p>&copy; 2024 Kigali Hillside Academy. All rights reserved.</p>
+    
+    <div class="footer-contact">
+        <p><span>📞</span>+0799375874</p>
+        <p><span>📍</span>Kigali-Kimironko-Zindiro-Masizi Street</p>
     </div>
 </footer>
 
