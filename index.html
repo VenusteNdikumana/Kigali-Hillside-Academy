@@ -276,12 +276,24 @@
         }
 
 
+/* Default style for larger screens */
+.navbar ul {
+    display: flex;
+    justify-content: center; /* Center the items on larger screens */
+}
+
+/* Style for smaller screens */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
+    .navbar ul {
+        display: block;
+        float: left; /* Float the menu to the left */
+    }
+
+    .navbar li {
+        display: block; /* Stack items vertically */
     }
 }
+
 
 
      
